@@ -59,6 +59,8 @@ while True:
     result = np.squeeze(output_data)
     scalar_result = int(round(np.asscalar(result)))
     
+    print(scalar_result)
+
     #Tomar lectura de la fecha y hora
     now = datetime.now()
     
@@ -68,10 +70,12 @@ while True:
         shutil.copy(path_image, path_image_infra + "/{}-{}-{}_{}:{}:{}.jpg".format(now.year, now.month, now.day, now.hour, now.minute, now.second))
         GPIO.output(23, False)
         time.sleep(5)
+        GPIO.output(23, False)
     else:
         print("Mascarilla detectada")
         shutil.copy(path_image, path_image_pos + "/{}-{}-{}_{}:{}:{}.jpg".format(now.year, now.month, now.day, now.hour, now.minute, now.second))
         GPIO.output(23, True)
         time.sleep(5)
+        GPIO.output(23, False)
 
     
