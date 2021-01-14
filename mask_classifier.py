@@ -10,11 +10,11 @@ import shutil
 import os
 
 # Guardar las rutas necesarias
-path_model = "/home/pi/Detenccion_Mascarillas/mask_classifier_1.tflite"
-path_images = "/home/pi/Detenccion_Mascarillas/images"
-path_image = "/home/pi/Detenccion_Mascarillas/images/cam_image.jpg"
-path_image_infra = "/home/pi/Detenccion_Mascarillas/images/infractores"
-path_image_pos = "/home/pi/Detenccion_Mascarillas/images/positivos"
+path_model = "/home/pi/Detencion_Mascarillas/mask_classifier_1.tflite"
+path_images = "/home/pi/Detencion_Mascarillas/images"
+path_image = "/home/pi/Detencion_Mascarillas/images/cam_image.jpg"
+path_image_infra = "/home/pi/Detencion_Mascarillas/images/infractores"
+path_image_pos = "/home/pi/Detencion_Mascarillas/images/positivos"
 
 # Crear carpetas
 os.makedirs(path_images, exist_ok=True)
@@ -31,12 +31,14 @@ GPIO.setup(23, GPIO.OUT)
 
 while True:
     # Tomar captura
+    print(Capturando imagen...)
     camera.resolution = (300, 300)
     camera.start_preview()
     sleep(5)
     camera.capture(path_image)
     camera.stop_preview()
-
+    
+    print(Detectando mascarilla...)
     # Importar el modleo de tflite
     interpreter = tflite.Interpreter(model_path=path_model)
     interpreter.allocate_tensors()
@@ -65,8 +67,6 @@ while True:
     output_data = interpreter.get_tensor(output_details[0]['index'])
     result = np.squeeze(output_data)
     scalar_result = int(round(np.asscalar(result)))
-    
-    print(scalar_result)
 
     #Tomar lectura de la fecha y hora
     now = datetime.now()
