@@ -1,0 +1,20 @@
+\BOOKMARK [1][-]{section.1}{Introducci\363n}{}% 1
+\BOOKMARK [1][-]{section.2}{Elementos usados en el producto}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Raspberry Pi 3 Model B+}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Raspberry Pi Camera Module V1}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{MLX90614 Gy-906}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Colaboratory}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{TensorFlow}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Metodolog\355a y desarrollo}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Conjunto de datos}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Data augmentation}{section.3}% 10
+\BOOKMARK [2][-]{subsection.3.3}{Arquitectura de la red neuronal}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.4}{M\351todo de optimizaci\363n y funci\363n de perdida}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.5}{Hiperpar\341metros}{section.3}% 13
+\BOOKMARK [2][-]{subsection.3.6}{Entrenamiento de la red neuronal}{section.3}% 14
+\BOOKMARK [2][-]{subsection.3.7}{Sensor infrarrojo}{section.3}% 15
+\BOOKMARK [2][-]{subsection.3.8}{Algoritmo en Python}{section.3}% 16
+\BOOKMARK [1][-]{section.4}{Resultados}{}% 17
+\BOOKMARK [1][-]{section.5}{Limitaciones}{}% 18
+\BOOKMARK [1][-]{section.6}{Conclusiones y futuros trabajos}{}% 19
+\BOOKMARK [1][-]{section*.3}{References}{}% 20

@@ -1,5 +1,14 @@
 \documentclass[journal]{IEEEtran}
+\usepackage[utf8]{inputenc}
 
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+    citecolor=black,
+}
 \usepackage{float}
 \usepackage{dblfloatfix}
 \usepackage{cite}
@@ -98,8 +107,13 @@ Con el modelo entrenado y optimizado, es necesario una transformación a un mode
 
 \subsection{Conjunto de datos}
 \label{sec:sec1}
+El modelo se entrena con dos conjuntos de datos para evaluar el rendimiento y velocidad de predicción. El primer conjunto de datos es generado artificialmente por Prajna Bhandary, en donde toma imágenes estándar de rostros y aplica puntos de referencia faciales. Los puntos de referencia faciales permitían localizar los rasgos faciales de una persona como ojos, cejas, nariz, boca y mandíbula. Esto permite crear un conjunto de datos artificialmente al incluir una mascarilla en la imagen de una persona sin mascarilla. Este conjunto de datos cuenta con 1376 imágenes, con la etiqueta "with\_mask" y "without\_mask", se encuentra dispoible en: \url{https://github.com/prajnasb/observations.git}. 
+
+El segundo conjunto de datos corresponde a una combinación de varios conjuntos de datos e imágenes de código abierto que contiene una gran variedad de etnias y nacionalidades.
+
 \subsection{Data augmentation}
 \label{sec:sec2}
+Para un buen desempeño del modelo, es necesario una gran cantidad de datos para realizar el entrenamiento de manera efectiva, esto debido a que no se cuenta con la disponibilidad de una cantidad adecuada de datos para entrenar el modelo propuesto. El método de aumento de datos se utiliza para resolver este problema. En esta técnica, se utilizan métodos como la rotación, el zoom, el desplazamiento, la distorsión y la inversión de la imagen para aumentar artificialmente la diversidad de conjuntos de datos para entrenar detectores. Para esto se utiliza una función de generación de datos de imagen para el aumento de imágenes, que devuelve lotes de datos de prueba y entrenamiento.
 \subsection{Arquitectura de la red neuronal}
 \label{sec:sec3}
 \subsection{Método de optimización y función de perdida}
